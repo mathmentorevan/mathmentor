@@ -1,48 +1,102 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10264c">
-  <meta name="description" content="MathMentor with Evan — making maths make sense. Personalised mathematics tutoring for primary school to Year 10, online and one-to-one in person. Enquiries: mathmentorevan@gmail.com.">
-  <title>MathMentor with Evan | Making Maths Make Sense</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <style>
-    :root{--navy:#10264c;--blue:#126ca7;--gold:#f3ba49;--paper:#f5f8fc;--ink:#142b49;--muted:#556780;--line:#dce6f0}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff}
-    a{color:inherit}a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}h1,h2,h3{line-height:1.18;letter-spacing:-.025em}h1{font-size:clamp(2.6rem,5.5vw,4.9rem);margin:12px 0}h2{font-size:clamp(1.85rem,3.5vw,2.55rem);margin:10px 0 20px}h3{font-size:1.16rem;margin:12px 0 8px}p{margin:0 0 15px}
-    .wrap{max-width:1120px;margin:auto;padding-left:24px;padding-right:24px}
-    .top{background:var(--navy);color:#fff}.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:-.02em;text-decoration:none;font-size:1.3rem;white-space:nowrap}.brand span{color:var(--gold);font-size:.8rem;font-weight:650}.links{display:flex;align-items:center;flex-wrap:wrap;gap:24px}.links a{text-decoration:none;color:#dbe7f6;font-size:.95rem}.links a:hover{text-decoration:underline}
-    .hero{background:linear-gradient(180deg,#f3f7fd 0%,#fff 80%);overflow:hidden}.hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-top:34px;padding-bottom:78px}.hero-copy{max-width:800px;margin:0 auto}.hero-logo{width:min(100%,740px);margin:0 auto 12px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 70px #0a345012;padding:16px}.hero-logo img{display:block;width:100%;height:auto;border-radius:12px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.77rem;font-weight:800;color:#2076ab}.headline-accent{color:#146d9e}.hero p{max-width:710px;margin-left:auto;margin-right:auto;color:var(--muted);font-size:1.1rem}.hero .actions{justify-content:center}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border-radius:12px;font-weight:750;padding:13px 22px;transition:transform .15s,background .15s}.btn:hover{background:#1d497e;transform:translateY(-1px)}.btn.secondary{background:#e9f0f7;color:var(--navy)}
-    section.section{padding-top:74px;padding-bottom:74px}.section-soft{background:var(--paper)}.intro{max-width:760px;color:var(--muted);font-size:1.06rem}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:32px}.card{background:white;border:1px solid var(--line);padding:26px;border-radius:20px;box-shadow:0 5px 25px #15385b07}.card p{color:var(--muted);margin:0}.symbol{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:#e9f2fc;color:#126ca7;font-size:1.65rem;font-weight:750}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:33px}.stepno{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#dceaf7;color:var(--blue);font-weight:850}
-    .about-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:45px;align-items:start}.about-copy p{color:#3f516b}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{background:var(--paper);border-radius:15px;padding:20px}.fact strong{display:block}.fact span{display:block;color:var(--muted);font-size:.86rem;margin-top:4px}.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:19px;margin-top:30px}.format-grid .card{border-color:#d3e4f1}.contact{background:var(--navy);color:white;border-radius:24px;padding:clamp(26px,5vw,52px);margin-top:8px}.contact p{color:#dbe5f1;max-width:800px}.contact .eyebrow{color:var(--gold)}.contact-email{display:inline-block;font-size:clamp(1rem,2.6vw,1.55rem);overflow-wrap:anywhere;color:#fff;font-weight:760;margin:8px 0 10px}.contact .btn{background:var(--gold);color:var(--navy)}.notice{font-size:.82rem;color:#bdcde0!important;margin-top:25px!important}footer{border-top:1px solid var(--line);color:var(--muted);text-align:center;padding:25px;font-size:.9rem}
-    @media(max-width:800px){.nav{padding-top:17px;padding-bottom:17px;align-items:flex-start;flex-direction:column;gap:10px}.links{gap:16px}.hero-grid{gap:18px;padding-top:25px;padding-bottom:48px}.hero-logo{max-width:650px;padding:9px}.cards,.steps{grid-template-columns:1fr}.about-grid,.format-grid{grid-template-columns:1fr}section.section{padding-top:55px;padding-bottom:55px}}@media(max-width:470px){.facts{grid-template-columns:1fr 1fr;gap:9px}.fact{padding:13px}.links a{font-size:.88rem}.brand{font-size:1.12rem}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10264c">
+<meta name="description" content="MathMentor with Evan — personalised maths tutoring for primary school to Year 10, online and in person. Enquire at mathmentorevan@gmail.com">
+<title>MathMentor with Evan | Making Maths Make Sense</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{--navy:#10264c;--blue:#126ca7;--gold:#e7ae3c;--paper:#f5f8fc;--ink:#152b48;--muted:#53667e;--line:#dce6f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:15px/1.48 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit}a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:auto;padding-inline:24px}
+header{background:var(--navy);color:#fff}
+nav{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{text-decoration:none;font-size:1.16rem;font-weight:800;white-space:nowrap}.brand span{font-size:.82rem;color:#f2c86f;font-weight:650}
+.links{display:flex;gap:18px;flex-wrap:wrap}.links a{text-decoration:none;font-size:.83rem;color:#e7eff9}.links a:hover{text-decoration:underline}
+.hero{background:linear-gradient(125deg,#f0f6fd,#fff);border-bottom:1px solid var(--line)}
+.hero-inner{display:grid;grid-template-columns:260px 1fr;align-items:center;gap:32px;padding-top:21px;padding-bottom:22px}
+.logo{width:100%;max-width:260px;height:auto;display:block}
+.kicker,.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);font-weight:800}
+h1{font-size:clamp(1.75rem,3.1vw,2.7rem);line-height:1.12;letter-spacing:-.035em;margin:7px 0 9px}
+.hero p{font-size:.98rem;color:var(--muted);max-width:740px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:13px}
+.btn{display:inline-block;border-radius:9px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:10px 15px;font-size:.88rem}
+.btn.alt{color:var(--navy);background:#e1ebf6}
+.section{padding-top:24px;padding-bottom:24px}
+.section.tint{background:var(--paper)}
+h2{font-size:clamp(1.25rem,2.3vw,1.65rem);line-height:1.2;letter-spacing:-.025em;margin:5px 0 10px}
+h3{font-size:1rem;margin:0 0 6px}
+p{margin:0 0 9px}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.tile{border:1px solid var(--line);background:#fff;border-radius:13px;padding:15px}
+.tile p,.subtle{color:var(--muted);font-size:.9rem}
+.symbol{display:inline-flex;align-items:center;justify-content:center;color:var(--blue);font-weight:850;background:#e9f2fb;width:34px;height:34px;border-radius:10px;margin-bottom:8px}
+.about{display:grid;grid-template-columns:1.6fr 1fr;gap:30px;align-items:start}
+.about p{font-size:.92rem;color:#425571}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.fact{background:#f1f6fc;padding:11px;border-radius:11px;font-size:.84rem}
+.fact strong{display:block;color:var(--navy)}
+.fact span{color:var(--muted)}
+.lower{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.lesson{display:flex;gap:12px}
+.lesson .symbol{flex:0 0 34px}
+.lesson p{font-size:.88rem;color:var(--muted)}
+.contact{background:var(--navy);color:#fff;border-radius:15px;padding:19px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.contact h2{margin:4px 0 7px}.contact p{font-size:.9rem;color:#dce7f5;margin:0}
+.contact .eyebrow{color:#f2c86f}.contact .btn{background:var(--gold);color:var(--navy);white-space:nowrap}
+.contact a.email{color:#fff;font-weight:700}
+footer{text-align:center;color:var(--muted);font-size:.79rem;padding:12px 20px}
+@media(max-width:800px){.hero-inner{grid-template-columns:190px 1fr;gap:18px}.logo{max-width:190px}.links{gap:12px}.about{grid-template-columns:1fr}.lower{gap:12px}}
+@media(max-width:620px){nav{padding-block:11px;display:block}.links{margin-top:6px;gap:10px}.hero-inner{grid-template-columns:1fr;gap:5px;text-align:center;padding-block:12px 18px}.logo{max-width:190px;justify-self:center}.hero p{font-size:.91rem}.actions{justify-content:center}.cols3,.lower{grid-template-columns:1fr}.section{padding-block:19px}.tile{padding:12px}.contact{display:block}.contact .btn{margin-top:14px}.facts{gap:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <header class="top">
-    <nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="#home">✦ MathMentor <span>with Evan</span></a><div class="links"><a href="#subjects">Subjects</a><a href="#approach">Approach</a><a href="#about">Meet Evan</a><a href="#formats">Lesson options</a><a href="#contact">Enquire</a></div></nav>
-  </header>
-  <main>
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid wrap">
-        <div class="hero-logo"><img src="mathmentor-logo.png" alt="MathMentor with Evan logo: blue and gold open-book M with maths symbols and the phrase Making Maths Make Sense" width="1493" height="1024" fetchpriority="high"></div>
-        <div class="hero-copy">
-          <span class="eyebrow">Personalised mathematics tutoring</span>
-          <h1 id="hero-title">Making Maths <span class="headline-accent">Make Sense.</span></h1>
-          <p>Friendly, clear and encouraging maths tutoring for students from <strong>primary school to Year 10</strong>. Learn the ideas behind the answers, practise with confidence, and build stronger foundations — with Evan.</p>
-          <div class="actions"><a class="btn" href="#contact">Enquire about tutoring →</a><a class="btn secondary" href="#about">Meet Evan</a></div>
-        </div>
-      </div>
-    </section>
-    <section id="subjects" class="section wrap"><span class="eyebrow">What we cover</span><h2>Maths support that meets students where they are</h2><p class="intro">Whether it's strengthening primary-school numeracy or working through more complex high-school concepts, lessons focus on understanding and practical progress.</p><div class="cards"><article class="card"><div class="symbol" aria-hidden="true">½</div><h3>Primary school maths</h3><p>Number skills, times tables, mental arithmetic, fractions, decimals, percentages and building confidence with everyday maths.</p></article><article class="card"><div class="symbol" aria-hidden="true">x²</div><h3>Years 7–10 maths</h3><p>Algebra, equations, graphs, ratios, geometry, measurement and schoolwork support, taught step by step.</p></article><article class="card"><div class="symbol" aria-hidden="true">△</div><h3>Mathematical thinking</h3><p>Word problems, logical reasoning and problem-solving strategies that help students tackle unfamiliar questions independently.</p></article></div></section>
-    <section id="approach" class="section section-soft"><div class="wrap"><span class="eyebrow">How lessons work</span><h2>Understand. Practise. Grow.</h2><p class="intro">Every learner is different. Evan aims to make maths approachable, explain the thinking behind each method and encourage students to ask questions.</p><div class="steps"><article><span class="stepno">1</span><h3>Understand the starting point</h3><p>Talk through goals, identify tricky concepts and find the right level to begin.</p></article><article><span class="stepno">2</span><h3>Learn the why</h3><p>Use clear explanations, worked examples and patient guidance instead of memorising methods without understanding.</p></article><article><span class="stepno">3</span><h3>Practise for confidence</h3><p>Apply the concepts, discuss mistakes constructively and revisit topics when needed.</p></article></div></div></section>
-    <section id="about" class="section wrap"><span class="eyebrow">About your tutor</span><h2>Meet Evan</h2><div class="about-grid"><div class="about-copy"><p>Hi, I'm Evan! I'm a <strong>Year 12 student</strong> who has been educated in both the <strong>United States and Australia</strong>. I've always had a strong passion for mathematics and enjoy helping others discover how satisfying it can be when a challenging idea finally clicks.</p><p>I'm an <strong>abacus graduate</strong> and have won <strong>multiple abacus competitions</strong>. My abacus journey helped strengthen my mental arithmetic, concentration and enthusiasm for numbers.</p><p>What I enjoy most is working with younger children and supporting students through <strong>Year 10</strong>. I aim to create a relaxed, encouraging environment where students feel comfortable asking questions, developing problem-solving skills and learning at their own pace.</p><p>At <strong>MathMentor with Evan</strong>, my goal is to make maths make sense — not just to find the correct answer, but to understand how to get there.</p></div><div class="facts"><div class="fact"><strong>Year 12</strong><span>Student tutor</span></div><div class="fact"><strong>US & Australia</strong><span>Educational experience</span></div><div class="fact"><strong>Abacus graduate</strong><span>Multiple competition wins</span></div><div class="fact"><strong>Primary–Year 10</strong><span>Maths tutoring</span></div></div></div></section>
-    <section id="formats" class="section section-soft"><div class="wrap"><span class="eyebrow">Flexible learning</span><h2>Choose the lesson format that works for you</h2><div class="format-grid"><article class="card"><div class="symbol" aria-hidden="true">⌘</div><h3>Online maths tutoring</h3><p>Convenient interactive lessons from home, featuring explanations, worked examples and time for questions.</p></article><article class="card"><div class="symbol" aria-hidden="true">1:1</div><h3>In-person one-to-one tutoring</h3><p>Personalised face-to-face lessons, depending on location, availability and suitable arrangements with a parent or guardian.</p></article></div></div></section>
-    <section id="contact" class="section wrap"><div class="contact"><span class="eyebrow">Enquiries welcome</span><h2>Let's make maths make sense.</h2><p>Looking for approachable, personalised maths tutoring for your child? Evan offers support for <strong>primary school students through Year 10</strong>, with online classes and in-person 1:1 options.</p><p>To enquire, email Evan with the student's <strong>year level</strong>, the <strong>maths topics</strong> they'd like help with, whether you prefer <strong>online or in-person lessons</strong>, and your <strong>general availability</strong>.</p><a class="contact-email" href="mailto:mathmentorevan@gmail.com">mathmentorevan@gmail.com</a><div><a class="btn" href="mailto:mathmentorevan@gmail.com?subject=MathMentor%20with%20Evan%20-%20Tutoring%20Enquiry&amp;body=Hello%20Evan%2C%0A%0AI%20would%20like%20to%20enquire%20about%20maths%20tutoring.%0A%0AStudent%27s%20year%20level%3A%20%0AMaths%20topics%20needing%20support%3A%20%0APreferred%20format%20(online%20or%20in-person)%3A%20%0AGeneral%20availability%3A%20%0A%0AThank%20you.">Email Evan →</a></div><p class="notice">For children's privacy, please avoid emailing sensitive student records in your initial enquiry. A parent or guardian should coordinate tutoring arrangements for minors.</p></div></section>
-  </main>
-  <footer>© <span id="year">2026</span> MathMentor with Evan · Making Maths Make Sense.</footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<header><nav class="wrap" aria-label="Main navigation">
+<a class="brand" href="#top">✦ MathMentor <span>with Evan</span></a>
+<div class="links"><a href="#subjects">Subjects</a><a href="#about">Meet Evan</a><a href="#lessons">Lessons</a><a href="#contact">Enquire</a></div>
+</nav></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-inner">
+<img class="logo" src="mathmentor-logo.png" alt="Original MathMentor with Evan blue and gold logo" width="1493" height="1024">
+<div>
+<div class="kicker">Personalised mathematics tutoring</div>
+<h1>Making Maths Make Sense.</h1>
+<p>Friendly, clear and encouraging maths tutoring for students from <strong>primary school to Year 10</strong>. Learn the ideas behind the answers, practise with confidence, and build stronger foundations — with Evan.</p>
+<div class="actions"><a class="btn" href="#contact">Enquire about tutoring →</a><a class="btn alt" href="#about">Meet Evan</a></div>
+</div>
+</div></section>
+<section id="subjects" class="section wrap">
+<div class="eyebrow">What we cover</div><h2>Support for every stage of maths learning</h2>
+<div class="cols3">
+<article class="tile"><span class="symbol" aria-hidden="true">½</span><h3>Primary maths</h3><p>Number skills, mental maths, times tables, fractions, decimals and percentages.</p></article>
+<article class="tile"><span class="symbol" aria-hidden="true">x²</span><h3>Years 7–10 maths</h3><p>Algebra, equations, graphs, geometry, ratios, measurement and schoolwork support.</p></article>
+<article class="tile"><span class="symbol" aria-hidden="true">△</span><h3>Problem solving</h3><p>Logical reasoning, word problems and confidence with unfamiliar questions.</p></article>
+</div></section>
+<section id="about" class="section tint"><div class="wrap about">
+<div><div class="eyebrow">Meet your tutor</div><h2>Hi, I'm Evan!</h2>
+<p>I'm a <strong>Year 12 student educated in both the United States and Australia</strong>, with a passion for maths and helping younger students enjoy learning.</p>
+<p>I'm an <strong>abacus graduate</strong> and have won <strong>multiple abacus competitions</strong>. I love showing children how maths works, explaining ideas patiently and helping students through Year 10 build their skills and confidence.</p>
+<p>My approach is simple: understand the concept, work through examples, practise, and learn from mistakes — without pressure to just memorise answers.</p>
+</div>
+<div class="facts"><div class="fact"><strong>Year 12</strong><span>Student tutor</span></div><div class="fact"><strong>US & Australia</strong><span>Education</span></div><div class="fact"><strong>Abacus graduate</strong><span>Competition winner</span></div><div class="fact"><strong>Primary–Year 10</strong><span>Maths support</span></div></div>
+</div></section>
+<section id="lessons" class="section wrap"><div class="eyebrow">Lesson options</div><h2>Learn in the way that suits you</h2>
+<div class="lower">
+<div class="lesson"><span class="symbol" aria-hidden="true">⌘</span><div><h3>Online tutoring</h3><p>Interactive maths lessons from home, with worked examples and time for questions.</p></div></div>
+<div class="lesson"><span class="symbol" aria-hidden="true">1:1</span><div><h3>In-person tutoring</h3><p>One-to-one lessons subject to location, availability and parent/guardian arrangements.</p></div></div>
+</div></section>
+<section id="contact" class="wrap section"><div class="contact">
+<div><div class="eyebrow">Enquiries welcome</div><h2>Ready to get started?</h2>
+<p>Email <a class="email" href="mailto:mathmentorevan@gmail.com">mathmentorevan@gmail.com</a> with the student's year level, topics needing support, preferred lesson format and general availability. Parents or guardians should coordinate arrangements for minors.</p></div>
+<a class="btn" href="mailto:mathmentorevan@gmail.com?subject=MathMentor%20Tutoring%20Enquiry&amp;body=Hi%20Evan%2C%0A%0AStudent%27s%20year%20level%3A%20%0ATopics%20needing%20support%3A%20%0APreferred%20format%3A%20%0AGeneral%20availability%3A%20%0A%0AThank%20you.">Email Evan →</a>
+</div></section>
+</main>
+<footer>© <span id="year">2026</span> MathMentor with Evan · Making Maths Make Sense.</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
