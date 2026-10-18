@@ -1,25 +1,19 @@
-# MathMentor by Evan
+# MathMentor with Evan
 
-**Tagline:** Building Confidence, One Problem at a Time.
+**Making Maths Make Sense.**
 
-A responsive student-led maths tutoring website made for GitHub Pages. No build tools required.
+A responsive, static mathematics tutoring website for primary school through Year 10.
 
-## Publish on GitHub Pages
+## Publish on existing GitHub Pages site
 
-1. Create a new **public** GitHub repository named `mathmentor-by-evan`.
-2. Upload `index.html` and `README.md` to the repository root; commit the changes.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select **main**, **/(root)**, and click **Save**.
-6. Open `https://YOUR-USERNAME.github.io/mathmentor-by-evan/` (replace username).
+Repository: https://github.com/mathmentorevan/mathmentor
 
-## Before inviting students
+1. Unzip the downloaded package.
+2. Open your repository and upload **index.html**, **mathmentor-logo.png**, and **favicon.svg** to the repository root. You may also update README.md.
+3. Replace existing `index.html` when GitHub asks (or use GitHub's file editor to paste the new HTML).
+4. Commit changes to `main`. GitHub Pages will deploy using your existing Settings → Pages branch selection (`main` + `/ (root)`).
+5. Visit https://mathmentorevan.github.io/mathmentor/ and refresh if needed.
 
-- Update the About section to accurately reflect Evan's experience.
-- Add a parent-managed email or enquiry link only when ready, avoiding personal contact details for a minor.
-- Don't upload personal student records, tracking spreadsheets or feedback with names to the public repository.
-- GitHub Pages is **public static hosting**, not suitable for a private student dashboard without a separate secure backend and authentication.
+The contact button opens an email composition window; it does not collect or store enquiries on the site.
 
-## Editing
-
-To update the website, edit `index.html` and commit the file on GitHub. Pages will redeploy automatically.
+Do not put student records or private information in this public repository.
